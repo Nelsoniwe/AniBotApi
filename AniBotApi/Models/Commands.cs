@@ -13,7 +13,7 @@ namespace AniBotApi.Models
         public IMongoCollection<UserItem> userInfo;
         public Commands()
         {
-            var client = new MongoClient("mongodb+srv://dbUser:rOkHhgCUCVnUK8OQ@cluster0-pnk7e.azure.mongodb.net/test?retryWrites=true&w=majority");
+            var client = new MongoClient("DB link");
             var database = client.GetDatabase("AniTelegramBotDB");
             userInfo = database.GetCollection<UserItem>("FavouriteAnim");
         }
